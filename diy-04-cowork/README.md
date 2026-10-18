@@ -51,23 +51,24 @@ This project is for judging the Riverbend Community Hackathon.
 
 Open `~/atc-diy/hackathon-judging/submissions` in Finder or File Explorer. Seven files, three formats. Everybody has a pile like this.
 
-### 2. Make a project from the folder
+### 2. Make the project and link the folder
 
-In the **Claude desktop app** (the browser can't connect folders on your computer):
+In the **Claude desktop app** (the browser can't link folders on your computer):
 
-1. In the left sidebar, find **Projects** and click the **+** next to it.
-2. Choose **Use an existing folder**.
-3. A Finder window opens. You want the **`hackathon-judging`** folder itself, the one that *contains* `event.md`, `rubric.md` and `submissions`. Don't pick `submissions`.
+1. In the left sidebar, click the **+** next to **Projects**.
+2. A **Create a project** box opens. Under *What are you working on?* type **Riverbend judging**. Leave the rest empty and click **Create project**. (Don't use **Add context** in this box: it only takes files, so you can open the folder but never choose it.)
+3. The project's page opens. On the right, next to **Instructions**, click **Add**, paste the **project instructions** from above, and save.
+4. Next to **Context**, click **Add** and choose **Link local folder** (at the bottom of the menu).
+
+   ![The project page: Context, Add, then Link local folder at the bottom of the menu](images/02-link-folder.png)
+
+5. A Finder window opens. You want the **`hackathon-judging`** folder itself, the one that *contains* `event.md`, `rubric.md` and `submissions`. Don't pick `submissions`.
    1. Press **Cmd+Shift+G**, type `~/atc-diy`, and press **Return**. You now see `hackathon-judging` in the list.
-   2. Click `hackathon-judging` **once** so it's highlighted. **Don't double-click it**: double-clicking opens the folder to show what's inside, instead of choosing it.
+   2. Click `hackathon-judging` **once** so it's highlighted. **Don't double-click it**: that opens the folder to show what's inside, instead of choosing it.
    3. Click **Open**.
    4. If macOS asks whether Claude can access files in that folder, click **Allow** (or **OK**).
-4. Name the project **Riverbend judging**.
-5. Paste the **project instructions** from above into the project's instructions box, then click **Create**.
 
-**Other way in:** if your app doesn't offer *Use an existing folder*, create the project, start a task in it, click **+** in the message box, and choose the option to add a **folder**. Not *Upload or add files*: that one only picks files, so a folder can be opened but never chosen. Then do 3.1–3.4 above.
-
-**Check it worked:** in the project, start a task and ask *"What files are in this folder?"* It should list `event.md`, `rubric.md`, the `submissions` folder and `brand`. If it says it has no folder, the folder didn't attach; try again.
+**Check it worked:** in the project's message box (*New session in Riverbend judging*), ask *"What files are in this folder?"* It should list `event.md`, `rubric.md`, the `submissions` folder and `brand`. If it says it has no folder, the folder didn't link; go back to step 4.
 
 Notice what's in the rules: how emails are signed, how long they can be, and **never send anything**. You won't repeat any of it in the prompt.
 
@@ -125,7 +126,7 @@ python3 setup_diy.py 4   # from the top of this repo
 
 ## If something goes wrong
 
-- **Can't add a folder:** check you're in the **desktop app**, not the browser. In the Finder window, choose `hackathon-judging` with a **single click** and then **Open**. A double-click just opens the folder, and choosing `submissions` gives Claude only part of the files. If you came in through the message box's **+**, make sure you chose the *folder* option, not *Upload or add files*.
+- **Can't add a folder:** check you're in the **desktop app**, not the browser. Link it from the **project's page**: **Context → Add → Link local folder**. The **Add context** button in the *Create a project* box and **Upload from device** only take files. In the Finder window, choose `hackathon-judging` with a **single click** and then **Open**; a double-click just opens the folder, and choosing `submissions` gives Claude only part of the files.
 - **It misses a trap:** ask, *"Are any of these the same project?"* or *"Were all of these on time?"* It will find it, and that's an honest lesson: check its work.
 - **It picks a different three:** fine, as long as the reasons come from your rubric and none of the three is ineligible.
 - **It offers to send an email:** say no. No email is connected and your rules say drafts only.
