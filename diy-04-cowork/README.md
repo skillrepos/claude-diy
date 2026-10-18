@@ -132,6 +132,6 @@ python3 setup_diy.py 4   # from the top of this repo
 - **#06 StockAlert is the same project as #01 ShelfCount:** same team, same code link, same features with a new name. Keep #01 (it came first) and note the duplicate.
 - **#05 Byte Club is two vague sentences:** no nonprofit named, and no link to the code.
 
-In our test run the three picks were **#02 Ride Along, #01 ShelfCount and #07 Foster Match**. When Ride Along dropped out, **#03 Shift Happens** moved up, not GrantBot.
+In our test run the three picks were **#02 Ride Along, #01 ShelfCount and #07 Foster Match**. When Ride Along dropped out, **#03 Shift Happens** moved up, not GrantBot. (Claude may call it by its app's name, **RefSwap**.) A re-check of the same two prompts on the same files (Oct 2026) gave the same picks and the same replacement.
 
 </details>

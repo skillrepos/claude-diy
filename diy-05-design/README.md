@@ -40,6 +40,8 @@ Attach **both brand files** (drag them in, or use the **+** button), then paste 
 Design a one-page flyer for Riverbend Hackathon Demo Night: Thursday, January 28, 6:30-8:30 pm, Riverbend Public Library, Community Room. Feature the three finalist projects: "Ride Along" (volunteer drivers for Golden Years Senior Center), "ShelfCount" (donation tracking for Eastside Community Food Bank), and "Foster Match" (foster homes for Riverbend Animal Rescue). Free, all ages, snacks provided. Use the attached logo and brand colors. Warm and community-first, not techy.
 ```
 
+![Both brand files attached, with the prompt ready to send](images/01-prompt.png)
+
 **Inside your DIY 4 project instead** (no attachments needed):
 
 ```text
@@ -48,27 +50,46 @@ Design a one-page flyer for Demo Night, featuring the three projects picked in t
 
 ### 2. Wait while it builds
 
-It usually takes about two minutes. A design panel opens beside the chat while it works. It isn't drawing a picture: it's laying out a real page, with text you can edit and pieces you can move.
+It usually takes two to three minutes. A design panel opens beside the chat straight away and shows *Claude is working…* on an empty canvas until the first version appears. It isn't drawing a picture: it's laying out a real page, with text you can edit and pieces you can move.
 
 ### 3. Look at the canvas
 
 **What you should see:** the flyer on a letter-size artboard with design tools along the top (select, hand, text, frame, sticky note, pen, shapes, zoom), using the teal, sunflower and cream from `brand.md` and the logo near the top. Claude also explains its choices in the chat, and says what it made up (like an intro line) so you can change it.
 
+![The flyer on the canvas, with the design tools along the top](images/03-canvas.png)
+
 **If the canvas says it has no artboards yet**, or still shows an older version after Claude says it's done: open the menu next to the design's title (top left of the panel) and choose **Refresh**, or reload the page.
 
 ### 4. Change it with your hands
 
-Double-click the time (or any line of text) and retype it, for example change "6:30 - 8:30 pm" to **"6:30 - 9:00 pm"**. No prompt, no waiting. (Or pick the **T** text tool in the toolbar and click the text.)
+Change the time to **"6:30 – 9:00 pm"**. No prompt, no waiting:
+
+1. **Double-click** the time. A blue box and a small text toolbar appear: you're editing that text.
+2. **Triple-click** the time to select the whole line (a double-click alone may select just one word).
+3. Type the new time.
+4. **Click an empty part of the canvas** to finish.
+
+![Editing the time: the text is selected, with a small formatting toolbar above it](images/04-edit-text.png)
+
+![The time now reads 6:30 – 9:00 pm](images/04-edited-time.png)
 
 ### 5. Change one spot with a comment
 
-Click the **speech-bubble** button at the top right of the panel to turn on comments, then click the **Foster Match** card and type:
+Click the **speech-bubble** button at the top right of the panel (left of **Share**) to turn on comments, then click the **Foster Match** card. A comment box opens with **@Claude** already filled in and **Send to Claude** ticked. Type after it:
 
 ```text
 Make this one stand out: add a small "First Demo Night!" badge and a paw print.
 ```
 
-If the comment doesn't seem to do anything, paste this into the chat instead (it worked in our test run):
+Press **Enter** to post it. Your comment appears in the chat with a *View thread* link, and Claude makes the change.
+
+![The comment box, addressed to @Claude with Send to Claude ticked](images/05-comment.png)
+
+![The Foster Match card gets a "First Demo Night!" badge and a paw print](images/05-badge.png)
+
+When you're done, click the speech-bubble button again to turn comment mode off before you go back to editing.
+
+If the comment doesn't seem to do anything, paste this into the chat instead:
 
 ```text
 Make the Foster Match card stand out: add a small "First Demo Night!" badge and a paw print.
@@ -82,11 +103,15 @@ Paste:
 Make a second version for Instagram: square, bigger headline, and only the date, place and the three project names.
 ```
 
-**What you should see:** a second artboard, "Instagram post (square)", appears next to the flyer on the same canvas, with a huge "Demo Night" headline. (Use **Refresh** if it doesn't show up.)
+**What you should see:** a second artboard, "Instagram post (square)", appears next to the flyer on the same canvas, with a huge "Demo Night" headline. It may be half off the right edge: open the zoom menu (the **%** at the top right of the panel) and choose **Fit artboards** to see both. (Use **Refresh** if it doesn't show up at all.)
+
+![After Fit artboards: the flyer and the square Instagram post side by side](images/06-instagram.png)
 
 ### 7. Take it with you
 
 Open the menu next to the design's title and choose **Export**. In our test it offered **HTML** (a web page), **PDF** (for printing), **PNG** (an image) and **More formats and apps**. The **Share** tab, or the **Share** button at the top right, lets you send a link others can view or comment on. Each artboard also has its own small download button.
+
+![The Export tab: HTML, PDF, PNG, and More formats and apps](images/07-export.png)
 
 ---
 

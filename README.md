@@ -32,6 +32,16 @@ python3 setup_diy.py check
 
 > **Windows:** use `python` if `python3` isn't found. The commands work in PowerShell, Git Bash and WSL. Where a README says `~/atc-diy`, that's the `atc-diy` folder in your user folder.
 
+## New to Claude Code? Five things that trip people up
+
+These apply to DIY 2, 3 and 6 (checked with Claude Code 2.1.302).
+
+1. **The trust question starts on "No, exit".** The first time you run `claude` in a folder, it asks whether you trust it. Press **↓** to highlight **Yes, I trust this folder**, then **Enter**. Pressing Enter straight away quits.
+2. **The line under the message box shows the mode** (*auto mode on*, *plan mode on*…). **Shift+Tab** steps through them: auto → manual → accept edits → plan → auto.
+3. **Grey text in the message box is a suggestion,** not something you typed. Just type your own message over it.
+4. **Steps fold into grey one-liners** like `Ran 1 shell command`. Press **Ctrl+O** to see everything in full, and **Ctrl+O** again to go back.
+5. **Long answers scroll off the top.** Use **Page Up** (or your mouse wheel) to read back, and **Ctrl+End** to jump back down.
+
 ## How the setup script works
 
 Demos that change files (2, 3, 4, 6 and 7) run in a **fresh working copy outside this repo**, in a folder called `atc-diy` in your home folder:

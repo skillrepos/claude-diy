@@ -33,6 +33,10 @@ git diff
 
 Look at the diff: free shipping now starts at $35 (a real change)… and a `DEBUG` line that prints `PAYMENTS_API_KEY`. Easy to miss when you're in a hurry. The tests still pass, so they won't catch it.
 
+![git diff: the $35 change, plus a DEBUG line that prints the payment API key](images/00-git-diff.png)
+
+> **Stuck in the diff?** If your terminal window is small, `git diff` opens in a viewer and the last line shows `:` or `(END)` instead of your prompt. Use the arrow keys to scroll, and press **q** to get back to the prompt.
+
 > **Run the setup script before starting Claude Code.** It creates an empty `.claude/skills` folder first, which lets a brand-new skill work straight away without a restart.
 
 ---
@@ -45,9 +49,11 @@ Look at the diff: free shipping now starts at $35 (a real change)… and a `DEBU
 claude
 ```
 
-If it asks whether you trust this folder, say yes.
+It asks whether you trust this folder. **The highlight starts on *No, exit*:** press **↓** once to move to **Yes, I trust this folder**, then **Enter**.
 
-Look at the bottom-left. If it says **manual mode**, Claude will ask before running each command; just approve them as they come, or press **Shift+Tab** until it reads **auto mode** so it asks less.
+![The trust question, with the highlight on "No, exit"](images/01-trust-folder.png)
+
+Look at the line under the message box. It usually reads **auto mode on**, which is what you want. If it says **manual mode**, Claude will ask before running each command; just approve them as they come, or press **Shift+Tab** until it reads **auto mode** so it asks less.
 
 ### 2. Describe your routine and let Claude write the skill
 
@@ -59,13 +65,29 @@ Before every commit I do the same things: run the tests, check my changes for le
 
 **What you should see:** it creates `.claude/skills/ready-to-commit/SKILL.md` and summarizes what the skill does. If it asks before making the folder or writing the file, approve it. No new syntax: you described what you do the way you'd explain it to a new teammate.
 
+![Claude summarizes the new ready-to-commit skill](images/02-skill-created.png)
+
+Grey text may appear in the message box afterwards (like `/ready-to-commit`). It's only a suggestion; type over it.
+
 ### 3. Read what it wrote
+
+Start with the top of the file:
+
+```text
+! head -5 .claude/skills/ready-to-commit/SKILL.md
+```
+
+(The `!` runs a normal terminal command inside Claude Code. Claude also reads the output and comments on it; that's normal.)
+
+![The top block: name, description, allowed-tools](images/03-skill-top-block.png)
+
+Then the whole thing:
 
 ```text
 ! cat .claude/skills/ready-to-commit/SKILL.md
 ```
 
-(The `!` runs a normal terminal command inside Claude Code.) Look for three things:
+It's longer than the screen, so the top scrolls away. Scroll up with **Page Up** (or your mouse wheel) to read it, then scroll back down or press **Ctrl+End**. Look for three things:
 
 - **The top block** between the `---` lines: a `name` and a **`description`**. The description is all Claude reads up front; it's how Claude knows *when* to use the skill.
 - **An `allowed-tools` line**, if there is one: the commands the skill may run without asking (often just the tests and read-only git commands).
@@ -75,9 +97,13 @@ It's an ordinary file. You can edit it and review it like code.
 
 ### 4. Run it by name
 
-Type `/ready` and pause: **`/ready-to-commit`** appears in the menu. Pick it and press **Enter**.
+Type `/ready` and pause: **`/ready-to-commit`** appears in the menu, highlighted. Press **Enter** to run it.
+
+![Typing /ready shows the new skill in the menu](images/04-slash-menu.png)
 
 **What you should see:** the tests pass (7 tests), and the verdict says **not ready** (the wording varies: "NOT READY", "Fix first"). It flags the `DEBUG` line in `checkout.py` that prints the payment API key, and suggests a commit message (something like `feat: lower free shipping threshold to $35`) that leaves the debug line out. Nothing is committed.
+
+![Tests pass, but the verdict is not ready: the debug line prints the API key](images/04-not-ready.png)
 
 The tests passed and it still says don't ship. Tests wouldn't catch that. The routine did.
 
@@ -89,7 +115,7 @@ Paste:
 Remove that debug line.
 ```
 
-Then, with **no slash command**, paste:
+Wait until it has finished (it says what it removed, and the message box is free again). Then, with **no slash command**, paste:
 
 ```text
 I think this is ready to commit.
@@ -97,13 +123,17 @@ I think this is ready to commit.
 
 **What you should see:** a line like **`Skill(ready-to-commit)`**: it chose the skill on its own. This time the verdict is **ready**, with a suggested message. (It may suggest committing the new skill folder separately. Good advice.) It used the skill because the description says it's for "about to commit."
 
+![Skill(ready-to-commit) loads on its own, and the verdict is ready](images/05-skill-picked.png)
+
 ### 6. Share it with your team
 
 ```text
 ! git status --short
 ```
 
-**What you should see:** `.claude/` listed as new (`??`). Commit that folder, and everyone who pulls the repo gets `/ready-to-commit`. Want a skill just for you, in every project? Put it in the `skills` folder inside `~/.claude/` instead.
+![pricing.py changed, and .claude/ is new](images/06-git-status.png)
+
+**What you should see:** `M pricing.py` (your $35 change) and `.claude/` listed as new (`??`). Commit that folder (for example, ask Claude: *"Commit the .claude folder on its own with your suggested message"*), and everyone who pulls the repo gets `/ready-to-commit`. Want a skill just for you, in every project? Put it in the `skills` folder inside `~/.claude/` instead.
 
 ---
 
@@ -122,6 +152,7 @@ The script deletes and rebuilds the folder, so `cd` into it again even if you're
 
 ## If something goes wrong
 
+- **Pressed Enter on the trust question and Claude Code quit:** the highlight starts on *No, exit*. Run `claude` again and pick **Yes, I trust this folder** with the ↓ arrow.
 - **`/ready-to-commit` isn't in the menu:** type `/reload-skills` and try again. Still missing? `/exit`, then `claude` again in the same folder.
 - **It names the skill slightly differently** (like `ready_to_commit`): use the name on your screen.
 - **It doesn't flag the debug line:** that's a real lesson: read the skill and improve it. Paste *"Update the skill so it always flags print statements that output environment variables, keys or passwords,"* then run it again.
