@@ -5,7 +5,7 @@
 **Where:** the **Claude desktop app** (not the browser), on a paid plan (Pro, Max, Team or Enterprise). The desktop app is what connects folders on your computer.
 **The chore:** you're a judge for the **Riverbend Community Hackathon** (made up). Seven teams sent submissions in three file formats. You have a scoring rubric and one evening. Claude reads everything, scores it, makes a real spreadsheet, drafts the emails, and catches the things a tired judge misses.
 
-**What's in the folder** (all fictional):
+**What's in the folder** (all fictional). The setup script below copies it to **`~/atc-diy/hackathon-judging/`**; the originals are in `claude-diy/diy-04-cowork/starter/`, plus `brand/` from `claude-diy/diy-05-design/files/brand/`:
 
 - `event.md`: dates, the **noon deadline**, and the format: the top 3 projects present at Demo Night
 - `rubric.md`: score 1–5 on Impact, It works, Clear, Original. **Not eligible:** late submissions, the same project entered twice, no link to the code. Ties go to all-first-timer teams.
@@ -31,7 +31,7 @@ From the top of this repo:
 python3 setup_diy.py 4
 ```
 
-It copies the folder to `~/atc-diy/hackathon-judging` and should report **7 submissions**. Use that copy, not the repo's `starter/` folder: Claude will add files to it.
+It copies the folder to `~/atc-diy/hackathon-judging` and should report **7 submissions**. Use that copy, not the repo's `diy-04-cowork/starter/` folder: Claude will add files to it.
 
 Copy these **project instructions** somewhere handy; you'll paste them in step 2:
 
@@ -77,7 +77,7 @@ Judge the hackathon submissions in this folder using rubric.md and event.md. Mak
 
 When it finishes, read the summary. It should flag the three traps (see the answers at the bottom if you want to check), and pick three projects for Demo Night.
 
-Then open the **spreadsheet** it made (something like `hackathon-scores.xlsx`): one row per submission, a score and a reason, and a note on the ones that aren't eligible. Open one file in `drafts/`.
+Then open the **spreadsheet** it made in `~/atc-diy/hackathon-judging/` (something like `hackathon-scores.xlsx` or `scores.xlsx`): one row per submission, a score and a reason, and a note on the ones that aren't eligible. Open one file in `~/atc-diy/hackathon-judging/drafts/`.
 
 **What you should see in the emails:** signed "The Riverbend Hackathon judges", under 100 words, and **saved, not sent**. You never said any of that in the prompt; the project instructions did.
 

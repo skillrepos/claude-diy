@@ -23,7 +23,7 @@ From the top of this repo:
 python3 setup_diy.py 2
 ```
 
-It copies the project to `~/atc-diy/checkout`, makes it a git project, and runs the tests. It should end with **Ran 6 tests … OK**. Always work in that copy, never in this repo's `starter/` folder.
+It copies the project to `~/atc-diy/checkout`, makes it a git project, and runs the tests. It should end with **Ran 6 tests … OK**. Always work in that copy, never in this repo's `diy-02-claude-code/starter/` folder.
 
 > **Windows:** use `python` instead of `python3` if that's what you have. The commands below work in PowerShell, Git Bash or WSL.
 

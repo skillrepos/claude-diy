@@ -3,7 +3,7 @@
 **Goes with:** Demo 1 in the talk (the chat window).
 **Time:** about 10 minutes.
 **Where:** [claude.ai](https://claude.ai) in your browser, or the Claude desktop app. Any plan works, including Free (the model list will be shorter).
-**Files:** both are in [`files/`](files/), and both are made up:
+**Files:** both are in [`diy-01-chat/files/`](files/) in this repo, and both are made up:
 
 | File | What it is |
 |---|---|
@@ -22,7 +22,13 @@
 
 ## Get ready
 
-- Download the two files in `files/` (or clone this repo) so you can drag them into the chat.
+- Find the two sample files. If you cloned this repo, they're in **`claude-diy/diy-01-chat/files/`**. To open that folder in Finder, run this from the top of the repo (the `claude-diy` folder):
+
+  ```bash
+  open diy-01-chat/files
+  ```
+
+  (Windows: `explorer diy-01-chat\files`.) Keep that window open next to your browser so you can drag files into the chat. Didn't clone? Open [`files/`](files/) on GitHub, click each file, and use the download button.
 - Open [claude.ai](https://claude.ai) and start a **new chat**.
 - Optional: use an **incognito chat** (the ghost icon at the top right) if you don't want this practice run saved or remembered. (Skip it if you plan to do DIY 5 in the same session: Design doesn't work in incognito chats.)
 
@@ -85,7 +91,7 @@ The label under the Reply box changes. Check that Effort is **High** (Opus remem
 
 ### 5. Attach a document and make it quote
 
-Drag **`tidewater-db-service-agreement.pdf`** into the message box (or click **+** → **Upload or add files**). A small preview of the PDF appears in the box. Then paste:
+Drag **`tidewater-db-service-agreement.pdf`** from `claude-diy/diy-01-chat/files/` into the message box (or click **+** → **Upload or add files**). A small preview of the PDF appears in the box. Then paste:
 
 ```text
 I'm about to sign up for this database service for my team. What's in here that could surprise us later? For each item, quote the exact sentence and give the section number.
@@ -125,7 +131,7 @@ Which country will our data be stored in?
 
 ### 7. Show it a picture
 
-Drag in **`helpdesk-september.png`** (or take a screenshot of any chart and paste it straight in). Then paste:
+Drag in **`helpdesk-september.png`**, also from `claude-diy/diy-01-chat/files/` (or take a screenshot of any chart and paste it straight in). Then paste:
 
 ```text
 What happened here? Write a 3-sentence update for our team chat. Is there anything else in this chart I should worry about?

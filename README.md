@@ -54,7 +54,7 @@ python3 setup_diy.py clean  # delete all the copies
 
 Run a demo, make a mess, then run the script again to get a clean start. **It deletes and rebuilds that demo's folder**, so `cd` back into it afterwards. The files in this repo never change. (Set `ATC_DIY_HOME` to put the copies somewhere else.)
 
-DIY 1 and 5 run in your browser and use the files in their folders directly.
+DIY 1 and 5 run in your browser and use the sample files straight from this repo: `diy-01-chat/files/` and `diy-05-design/files/brand/`. On a Mac, `open diy-01-chat/files` (run from the top of the repo) opens that folder in Finder so you can drag files into the chat.
 
 ## Good to know
 

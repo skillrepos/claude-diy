@@ -5,7 +5,7 @@
 **Where:** desktop **Excel** and **PowerPoint** (Microsoft 365) with the **Claude add-in** installed in both and signed in to a paid Claude plan.
 **The problem:** the owners' meeting is today. The finance workbook for **Harborview Coffee Co.** (made up) has a broken formula, and the owners' deck is missing its financial slide. In Excel, Claude finds and fixes the break, showing exactly which cells it means. Then, **without leaving Excel**, you ask it to build the missing slide in the open deck, on the deck's own template. The slide's numbers are only right *because* the workbook got fixed first.
 
-**Files** (in [`files/`](files/), all sample data):
+**Files** (in [`diy-07-office/files/`](files/) in this repo, all sample data; the setup script copies them to `~/atc-diy/office/`, and those copies are the ones you open):
 
 | File | What it is |
 |---|---|

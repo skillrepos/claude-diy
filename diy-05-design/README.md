@@ -3,7 +3,7 @@
 **Goes with:** Demo 5 in the talk (Claude Design).
 **Time:** about 8 minutes, including a minute or two while the first version builds.
 **Where:** [claude.ai](https://claude.ai) in your browser, or the Claude desktop app. Design needs a paid plan, and the feature is still marked as a preview, so menus move around. Go by what your screen shows.
-**Files:** the Riverbend Hackathon's logo and brand notes in [`files/brand/`](files/brand/) (made up):
+**Files:** the Riverbend Hackathon's logo and brand notes in [`diy-05-design/files/brand/`](files/brand/) in this repo (made up):
 
 | File | What it is |
 |---|---|
@@ -23,7 +23,13 @@
 
 ## Get ready
 
-- Download `riverbend-logo.png` and `brand.md` from `files/brand/` (or clone this repo).
+- Find `riverbend-logo.png` and `brand.md`. If you cloned this repo, they're in **`claude-diy/diy-05-design/files/brand/`**. To open that folder in Finder, run this from the top of the repo (the `claude-diy` folder):
+
+  ```bash
+  open diy-05-design/files/brand
+  ```
+
+  (Windows: `explorer diy-05-design\files\brand`.) Didn't clone? Open [`files/brand/`](files/brand/) on GitHub, click each file, and use the download button.
 - Start a **new conversation**, and **not an incognito one**: Design isn't available in incognito chats (Claude will tell you it has no canvas and draw the flyer inline instead).
 - A capable model works best: pick Opus (or similar) below the message box.
 - **Did DIY 4 in the desktop app?** You can do this inside the same **Riverbend judging** project instead and skip attaching files; use the second prompt in step 1.
@@ -34,7 +40,7 @@
 
 ### 1. Ask for a design
 
-Attach **both brand files** (drag them in, or use the **+** button), then paste the prompt. You don't need to pick anything special: asking to "design" a flyer is enough. (Some versions also show a **Design** option in the message box; if yours does, you can pick it.)
+Attach **both brand files**, `riverbend-logo.png` and `brand.md` from `claude-diy/diy-05-design/files/brand/` (drag them in, or use the **+** button), then paste the prompt. You don't need to pick anything special: asking to "design" a flyer is enough. (Some versions also show a **Design** option in the message box; if yours does, you can pick it.)
 
 ```text
 Design a one-page flyer for Riverbend Hackathon Demo Night: Thursday, January 28, 6:30-8:30 pm, Riverbend Public Library, Community Room. Feature the three finalist projects: "Ride Along" (volunteer drivers for Golden Years Senior Center), "ShelfCount" (donation tracking for Eastside Community Food Bank), and "Foster Match" (foster homes for Riverbend Animal Rescue). Free, all ages, snacks provided. Use the attached logo and brand colors. Warm and community-first, not techy.
