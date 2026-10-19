@@ -66,7 +66,7 @@ It usually takes two to three minutes. A design panel opens beside the chat stra
 
 **If the canvas says it has no artboards yet**, or still shows an older version after Claude says it's done: open the menu next to the design's title (top left of the panel) and choose **Refresh**, or reload the page.
 
-### 4. Change it with your hands
+### 4. Change it manually
 
 Change the time to **"6:30 – 9:00 pm"**. No prompt, no waiting:
 
