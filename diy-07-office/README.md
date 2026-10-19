@@ -35,7 +35,7 @@ Then:
 
 - [ ] Open `~/atc-diy/office/harborview-fy2026.xlsx` in Excel and `~/atc-diy/office/harborview-owners-review.pptx` in PowerPoint.
 - [ ] In **both** apps, open the Claude add-in (the **Claude** button at the right end of the **Home** tab) and check it's **signed in and answering** (send "hi", then start a new conversation). Not installed? Get it from the Office Add-ins store (search "Claude").
-- [ ] Turn on **"Let Claude work across files"** in **both** apps, and check each one separately: in our test it was on in Excel but **off** in PowerPoint, and step 4 failed until PowerPoint's was on too. In each add-in: the **⋮** menu at the top of the panel → **Settings** → scroll down. When it's on, it lists *Claude for Excel* and *Claude for PowerPoint* with check marks. Do this **before** step 2: switching it on can restart the add-in's conversation.
+- [ ] Turn on **"Let Claude work across files"** in **both** apps, and check each one separately. In each add-in: the **⋮** menu at the top of the panel → **Settings** → scroll down. When it's on, it lists *Claude for Excel* and *Claude for PowerPoint* with check marks. Do this **before** step 2: switching it on can restart the add-in's conversation.
 
   <img src="images/00-settings-excel.png" width="230" alt="Let Claude work across files, on in Excel"> <img src="images/00-settings-powerpoint.png" width="260" alt="Let Claude work across files, on in PowerPoint">
 
@@ -53,13 +53,13 @@ In Excel, look at **Q2** and **FY Total**. Total Revenue, Gross Profit and Opera
 
 ### 2. Ask about your own data
 
-In the **Excel** add-in, paste:
+In the **Excel** add-in, get back to an entry screen. (You should be able to scroll up on the settings and see a left-pointing arrow to go back.) Then, paste:
 
 ```text
 Why are Q2 and the full-year totals showing #REF!, and what would fix it? Don't change anything yet.
 ```
 
-> The last sentence matters. When we asked only *"how do I fix it?"*, Claude in Excel went ahead and fixed the workbook in the same reply, without asking.
+> The last sentence matters. We don't want Claude inferring it can fix/change things here right now.
 
 **What you should see:** an answer that names the cells. **C8** (Q2 Total Revenue) is `=C5+C6+#REF!`: it lost its link to the **Online Store** row (C7), and the error spreads to **F8, C13, F13, C20 and F20** (and blanks C14 and F14). The cell references should be clickable. Click one and Excel jumps there. It should end by saying it hasn't changed anything.
 
