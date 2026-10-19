@@ -69,6 +69,8 @@ Why are Q2 and the full-year totals showing #REF!, and what would fix it? Don't 
 
 ### 3. Fix it, with your OK
 
+**NOTE: You might hit a bug in the add-in where you can't type in the entry area or it's already populated with something like "process". If so, you can work around it for now. Scroll up until you see the italicized "i" in the gray square. Click on that and hit "Reload".**
+
 Paste:
 
 ```text
